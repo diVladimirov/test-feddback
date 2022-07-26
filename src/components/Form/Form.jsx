@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import feedBacksOperation from "../../redux/feedbacks/feedBackOperations";
 import {
   FormWrapper,
   TitleStyled,
@@ -11,6 +13,7 @@ const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const dispatch = useDispatch();
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -27,6 +30,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    dispatch(feedBacksOperation.createFeedBack({ name, email, message }));
     setName("");
     setEmail("");
     setMessage("");
