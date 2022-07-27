@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../Form/Form";
+import FormFormik from "../Form/FormFormik";
 import {
   MainBackgroundImage,
   YellowUpLeftStyled,
@@ -46,7 +46,7 @@ const Main = () => {
       <CloudSevenStyled src={CloudSeven} alt="CloudSeven" />
       <CloudEightStyled src={CloudEight} alt="CloudEight" />
       <CloudNineStyled src={CloudNine} alt="CloudNine" />
-      <Form />
+      <FormFormik />
       <MainBackgroundImage></MainBackgroundImage>
     </main>
   );

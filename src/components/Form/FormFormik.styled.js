@@ -42,7 +42,7 @@ export const TextAreaStyled = styled.textarea`
   height: 189px;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
-  padding: 31px 0px 0px 46px;
+  padding: 31px 46px 0px 46px;
   margin-bottom: 23px;
   resize: none;
   ::placeholder {
@@ -57,6 +57,7 @@ export const TextAreaStyled = styled.textarea`
     outline: none;
   }
 `;
+
 export const FormButtonStyled = styled.button`
   width: 218px;
   height: 73px;
@@ -72,4 +73,10 @@ export const FormButtonStyled = styled.button`
   :focus {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
+`;
+
+export const ErrorMessage = styled.div`
+  font-weight: 700;
+  font-size: 16px;
+  color: red;
 `;
