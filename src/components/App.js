@@ -3,6 +3,7 @@ import GlobalStyle from "../config/GlobalStyle";
 import { AppWrapper } from "./App.styled";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
+import Toast from "./Toast/Toast";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <GlobalStyle />
         <Main />
         <Footer />
+        <Toast />
       </AppWrapper>
     </>
   );

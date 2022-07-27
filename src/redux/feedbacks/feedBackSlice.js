@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import feedBacksOperations from "./feedBackOperations";
 
 const initialState = {
-  feedback: [{ name: null, email: null, message: null }],
+  feedback: [],
 };
 
 const feedbackSlice = createSlice({

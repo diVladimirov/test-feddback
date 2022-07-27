@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import feedBacksOperation from "../../redux/feedbacks/feedBackOperations";
 import {
   FormWrapper,
@@ -14,6 +14,12 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
+  const feedbacks = useSelector((state) => state.feedback.feedback);
+  console.log(feedbacks);
+
+  useEffect(() => {
+    dispatch(feedBacksOperation.getAllFeedBacks());
+  }, [dispatch]);
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
